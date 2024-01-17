@@ -76,3 +76,18 @@
 14.1.	git log --oneline --graph --all
 14.2.	git cherry-pick bd12ffd
 
+15.	I filen fix2.txt ska du nu skriva in de kommandon som användes för att utföra stegen hit fram.
+15.1.	git add fix2.txt
+15.2.	git commit -m "Add all git commands to fix2.txt"
+15.3.	git log --oneline --graph –all
+
+16.	Skapa ett tomt repository på github och pusha all information från det lokala till remote 
+	repositoriet. Uppdatera fix2.txt med de kommandon som användes för att publisera på github och skapa en ny commit för detta som också pushas till github.
+16.1.	git remote add origin https://github.com/ByHatice/LearnGit.git 
+16.2.	git branch -M main
+16.3.	git push -u origin main
+16.4.	git checkout feature2
+16.5.	git push -u origin feature2
+16.6.	git push origin extinct
+16.7.	git checkout main  
+
