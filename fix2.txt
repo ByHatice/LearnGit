@@ -88,6 +88,44 @@
 16.3.	git push -u origin main
 16.4.	git checkout feature2
 16.5.	git push -u origin feature2
-16.6.	git push origin extinct
+16.6.	git push origin extinct  
 16.7.	git checkout main  
+16.8.	git add  fix2.txt
+16.9.	git commit -m "Add exercise 15 and 16"
+16.10.	git push -u origin main
+
+17.	Skapa en .gitignore fil och lägg till instruktioner i den för följande: 
+Ignorera alla filer med filändelsen jar 
+Ignorera alla filer i katalogerna out och target 
+Tillåt filer som slutar med html även om den finns under katalogen target. 
+Prova att skapa filer i ditt working tree för att se om det fungerar som tänkt. Glöm inte commit och push. Följande branches, tags och commits bör nu finnas i repositoriet.
+17.1.	touch .gitignore
+17.2.	.git add .gitignore
+17.3.	git commit -m "Add .gitignore"
+17.4.	git push -u origin main
+
+18.	Skapa en annoterad tag för den senaste commiten som main pekar på. Ge taggen namnet v1.0 och message ”Version 1.0”
+18.1.	git tag -a v1.0 -m "Verion 1.0"
+18.2.	git show v1.0
+18.3.	git push origin v1.0
+
+19.	Använd nu git rebase -i för att genomföra en interactive rebase av de två senaste commit som finns i main branchen. Vi vill slå ihop dessa två commits till en ny som lägger till fix2.txt filen och dess innehåll i en enda commit med lämpligt message.
+19.1.	git rebase -i HEAD~2
+19.2.	git push -f 
+
+20.	Uppdatera fix2.txt med de nya commandon som användes i steg 18,19 och som behövs för att 
+färdigställa den här punkten 20!… Gör detta i en feature3 branch som mergas in i main med egen 
+merge commit! Kommer du på fler commandon som behöver göras för att allt ska bli klart? Ångra 
+merge commiten och använd amend på feature branchen tills allt är med i en enda commit där.
+20.1.	git checkout feature1
+20.2.	git push -u origin feature1 //glömde pusha det tidigare 
+20.3.	git checkout -b feature3
+20.4.	notepad fix2.txt
+20.5.	git add fix2.txt
+20.6.	git commit -m "Update fix2.txt with final commands"
+20.7.	git switch main
+20.8.	git merge feature3
+20.9.	git push
+20.10.	git checkout feature3
+20.11.	push -u origin feature3
 
